@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag 'test' %>
+
+<header>
+  <%= link_to 'TOP', root_path %>
+  <%= link_to '新規作成',  new_question_path %>
+</header>
+
+<div id="container">
+<h1 class="main_title">一覧</h1>
+  <%if flash[:notice]  %>
+    <p class="notice"><%= flash[:notice] %></p>
+  <% end %>
+  
+  <% @questions.each do |question|  %>
+<table class="question">
+  <tr><th>問:<%= question.quiz %></th></tr>
+  <tr><th class="border_dotted">解:<%= question.answer %></th></tr>
+</table>
+
+<% end %>
+  
+</div>
