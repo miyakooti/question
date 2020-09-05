@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>VocApp</title>
+    <title>赤シートにさようなら</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   </head>
 
   <body>
+  <header>
+  <%= link_to '赤シートにさようなら', root_path %>
+  <%= link_to '新規作成',  new_question_path %>
+  </header>
     <%= yield %>
   </body>
 </html>

@@ -17,7 +17,9 @@ header a{
   color:white;
   display:block;
   padding:20px;
-  line-height:10px
+  line-height:10px;
+  font-weight:bold;
+  letter-spacing:2px;
 }
 header a:hover{
   background-color:#555;
@@ -28,24 +30,24 @@ header a:hover{
   padding:50px 0;
   margin:0 auto;
   text-align:left;
+  max-width:800px;
 }
-.main_title{
-  text-align:left;
-  border-bottom:1px solid skyblue
-}
-
 .main_title {
   text-align: left;
   border-bottom: 1px solid skyblue;
   margin-bottom:50px
 }
 .question{
-  background-color:lightgray;
+  background-color:#eee;
   width:100%;
   border:1px solid gray;
+  margin-bottom: 25px;
+  border-radius: 6px;
 }
 .question th{
-  width:50%
+  width:50%;
+  padding: 2px 7px;
+  
 }
 
 .border_dotted{
@@ -53,4 +55,25 @@ header a:hover{
 }
 .question{
   margin-bottom:25px;
+}
+
+.hide{
+  color:#eee;
+  width: 96%;
+  display: inline-block;}
+
+.look span:hover{
+  color:black;
+}
+.button a{
+  text-decoration:none;
+  color:blue;
+}
+.notice{
+  text-align:center;
+}
+@media(max-width:751px){
+  .look span:click{
+  color:black;
+}
 }
