@@ -12,9 +12,33 @@
   </head>
 
   <body>
+  <% path = request.fullpath %>
   <header>
+  <div class="button_box_right">
   <%= link_to '赤シートにさようなら', root_path %>
+  </div>
+  
+  
+  <!--↓ここでshowとnewの時には、検索窓を出力しないようにする。-->
+  <% if path.include?('edit') || path.include?('new') %>
+  <% else %>
+  <div class="button_container_right">
+    
+  <div class="button_box_left search_box">
+  <%= form_tag('/questions', method: :get) do %>
+  <%= label_tag :問題文： %>
+  <%= text_field_tag :search_quiz %>
+  <%= label_tag :回答： %>
+  <%= text_field_tag :search_answer %>
+  <%= submit_tag '検索' %>
+  <% end %>
+  </div>
+  <% end %>
+  
+  <div class="button_box_left">
   <%= link_to '新規作成',  new_question_path %>
+  </div>
+  </div>
   </header>
     <%= yield %>
   </body>
