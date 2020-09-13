@@ -22,7 +22,7 @@
   <!--↓ここでshowとnewの時には、検索窓を出力しないようにする。-->
   <% if path.include?('edit') || path.include?('new') %>
   <% else %>
-  <div class="button_container_right">
+  <div class="button_container_right sp_none">
     
   <div class="button_box_left search_box">
   <%= form_tag('/questions', method: :get) do %>

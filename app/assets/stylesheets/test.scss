@@ -72,7 +72,7 @@ header a:hover{
 
 .hide{
   color:#eee;
-  width: 96%;
+  width: 90%;
   display: inline-block;}
 
 .look span:hover{
@@ -101,5 +101,8 @@ header a:hover{
 @media(max-width:751px){
   .look span:click{
   color:black;
+}
+.sp_none{
+  display:none;
 }
 }
